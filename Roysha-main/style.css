@@ -68,3 +68,82 @@ small{
 .outline-p{
     margin-bottom:30px;
 }
+
+/* card */
+
+.card-ico{
+    margin-bottom:20px;
+    color:#2f2f35;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* btn */
+
+.btn{
+    display:block;
+    width:200px;
+    margin-top:60px;
+    padding:15px 0;
+    background-color:#256be6;
+    color:#fff;
+    font-weight:bold;
+    letter-spacing:0.025em;
+    text-align:center;
+    text-decoration:none;
+    border-radius:30px;
+}
+
+/* ----------------home---------------- */
+
+/* features */
+
+.features{
+    padding:80px 0;
+}
+
+.features .inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.features .outline{
+    width:42.7%;
+}
+
+.features-list{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    width:50%;
+    margin-bottom:-70px; /*ネガティブマージン*/
+}
+
+.features-list .card{
+    width:44%;
+    margin-bottom:70px;
+}
+
+/* payment */
+
+.payment{
+  padding: 80px 0;
+  background-color: #F7FAFF;
+}
+
+.payment .inner{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.payment-img{
+    width:50%;
+}
+
+.payment .outline{
+    width:42.7%;
+}
