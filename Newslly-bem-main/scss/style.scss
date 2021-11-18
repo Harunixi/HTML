@@ -4,11 +4,26 @@ $color-text:#A6ADB4;
 $color-heading:#202124;
 $color-gray:#F6F8F9;
 $color-accent:#FA6980;
+$color-white:#ffffff;
 
 @mixin inner($w:800px){
-    min-width: 800px;
+    max-width: $w;
     width:90%;
     margin:0 auto;
+}
+
+@mixin flex($s:space-between,$a:center){
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: $s;
+    align-items:$a;
+}
+
+@mixin title{
+    margin-bottom:10px;
+    font-size:18px;
+    font-weight:bold;
+    line-height:(30/18);
 }
 
 body{
@@ -18,7 +33,7 @@ body{
 }
 
 img{
-    min-width: 100%;
+    max-width: 100%;
     height:auto;
     vertical-align:bottom;
 }
@@ -27,7 +42,49 @@ li{
     list-style: none;
 }
 
-/*block----------*/
+/* card */
+
+.card{
+    margin-bottom: 60px;
+    background-color: $color-white;
+    width:47.5%;
+    &__body{
+        padding:27px 35px 35px;
+    }
+    &__title{
+        @include title;
+    }
+    &__text{
+        margin-bottom: 30px;
+        color:$color-text;
+    }
+}
+
+/* btn */
+
+.btn{
+    padding: 12px 43px;
+    color:$color-white;
+    background-color: $color-accent;
+    font-weight:bold;
+    text-decoration: none;
+    text-align:right;
+}
+
+/*block--------------------*/
+
+/*header--------------------*/
+
+/*main--------------------*/
+
+/*news--------------------*/
+
+.news{
+    padding-bottom: 60px;
+    &__list{
+        @include flex();
+    }
+}
 
 .title-main{
     margin-bottom: 30px;
@@ -41,7 +98,11 @@ li{
 .trending{
     background-color: $color-gray;
 
+    &__list{
+        @include flex();
+    }
+
     &__inner{
-        @include inner;
+        @include inner();
     }
 }
